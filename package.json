@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/quarterto/enex-parser.git"
   },
-  "keywords": [],
+  "keywords": ["enex", "evernote", "parse"],
   "author": "Matt Brennan <matt@153.io> (http://blog.153.io/)",
   "license": "MIT",
   "bugs": {
