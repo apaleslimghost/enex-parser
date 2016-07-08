@@ -12,7 +12,10 @@ const cheerioParse = fn => data => fn(cheerio.load(data, {
 	normalizeWhitespace: true,
 }));
 
-const parseContent = cheerioParse($ => toMarkdown($('en-note').html()));
+const parseContent = cheerioParse($ => toMarkdown($('en-note').html(), {converters: [
+	{filter: 'div', replacement: html => '\n\n' + html},
+	{filter: 'span', replacement: html => ' ' + html},
+]}));
 
 const parseNote = (el, $) => ({
 	title: el.find('title').text(),
