@@ -4,7 +4,7 @@ import toMarkdown from 'to-markdown';
 const $_ = ($, fn) => (i, el) => fn($(el), $);
 const parseDate = dateString => {
 	const [matches, Y, M, d, h, m, s] = /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z$/.exec(dateString) || [];
-	if(matches) return new Date(Y, M, d, h, m, s);
+	if(matches) return new Date(Y, M - 1, d, h, m, s);
 };
 
 const cheerioParse = fn => data => fn(cheerio.load(data, {
