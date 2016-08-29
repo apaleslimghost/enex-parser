@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "bin": "bin.js",
   "scripts": {
-    "prepublish": "npm-package-integrity"
+    "prepublish": "make && npm-package-integrity"
   },
   "repository": {
     "type": "git",
